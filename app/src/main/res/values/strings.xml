@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Video Card</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="hint_login_usuario">Usuario</string>
+    <string name="hint_login_contraseña">Contra</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <string name="button_login_done">Done</string>
+    <string name="home">Home</string>
+    <string name="title_activity_seccion">SeccionActivity</string>
+</resources>
