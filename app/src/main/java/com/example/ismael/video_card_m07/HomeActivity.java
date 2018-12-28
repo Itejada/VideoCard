@@ -25,29 +25,52 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
+    construirReccycler();
 
+    }
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.button_list: Utilitdades.visualizacion= Utilitdades.LIST;
+                break;
+            case R.id.button_grid: Utilitdades.visualizacion=Utilitdades.GRID;
+                break;
+        }
+    construirReccycler();
+    }
+
+    private void construirReccycler() {
         lista_Secciones = new ArrayList<>();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView_home);
-        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        if (Utilitdades.visualizacion==Utilitdades.LIST){
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        }else{
+            recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        }
 
         llenarSeccion();
+
         AdapterDatos adapterDatos=new AdapterDatos(lista_Secciones);
         recyclerView.setAdapter(adapterDatos);
     }
-        private void llenarSeccion(){
-            lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-            lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-            lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-            lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-            lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-            lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-            lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-            lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-            lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+
+    private void llenarSeccion(){
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
 
 
-        }
+
+    }
 
                                                 /*for (int i = 0; i <110 ; i++) {
                                                     lista_Secciones.add("DATO "+i);

@@ -12,8 +12,10 @@ import com.example.ismael.video_card_m07.Dataset.Seccion;
 
 import java.util.ArrayList;
 
-public class AdapterDatos  extends RecyclerView.Adapter<AdapterDatos.ViewHolderDatos>{
+public class AdapterDatos  extends RecyclerView.Adapter<AdapterDatos.ViewHolderDatos>
+implements View.OnClickListener{
     ArrayList<Seccion> listaSeccion;
+    private View.OnClickListener listener;
 
     public AdapterDatos(ArrayList<Seccion> secciones) {
         listaSeccion = secciones;
@@ -24,20 +26,40 @@ public class AdapterDatos  extends RecyclerView.Adapter<AdapterDatos.ViewHolderD
     @NonNull
     @Override
     public ViewHolderDatos onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+
+       int layout=0;
+       if ( Utilitdades.visualizacion==Utilitdades.LIST){
+           layout=R.layout.lista_home_secciones;
+       }else{
+           layout=R.layout.grid_home_secciones;
+
+       }
         View view= LayoutInflater.from(viewGroup.getContext())
-        .inflate(R.layout.lista_home_secciones,null,false);
+        .inflate(layout,null,false);
+
+
         return new ViewHolderDatos(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderDatos viewHolderDatos, int i) {
+        viewHolderDatos.nombre.setVisibility(View.GONE);
+
+        if ( Utilitdades.visualizacion==Utilitdades.LIST) {
         viewHolderDatos.nombre.setText(listaSeccion.get(i).getNombre());
+        viewHolderDatos.nombre.setVisibility(View.VISIBLE);
+        }
         viewHolderDatos.foto.setImageResource(listaSeccion.get(i).getImagen());
     }
 
     @Override
     public int getItemCount() {
         return listaSeccion.size();
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 
     public class ViewHolderDatos extends RecyclerView.ViewHolder {

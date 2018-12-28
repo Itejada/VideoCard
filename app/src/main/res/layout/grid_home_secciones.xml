@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+    >
+<ImageView
+    android:src="@drawable/spyro"
+    android:layout_marginTop="10dp"
+    android:id="@+id/imageView_homeList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:srcCompat="@mipmap/ic_launcher" />
+
+<TextView
+    android:text="Nombre"
+    android:id="@+id/textView_home_list"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="10dp"
+    android:textSize="20sp"
+    android:textStyle="bold"
+
+    />
+
+
+
+</LinearLayout>
