@@ -12,8 +12,10 @@ import com.example.ismael.video_card_m07.Dataset.Seccion;
 
 import java.util.ArrayList;
 
-public class AdapterDatos  extends RecyclerView.Adapter<AdapterDatos.ViewHolderDatos>
-implements View.OnClickListener{
+public class AdapterDatos
+        extends RecyclerView.Adapter<AdapterDatos.ViewHolderDatos>
+        implements View.OnClickListener{
+
     ArrayList<Seccion> listaSeccion;
     private View.OnClickListener listener;
 
@@ -37,6 +39,7 @@ implements View.OnClickListener{
         View view= LayoutInflater.from(viewGroup.getContext())
         .inflate(layout,null,false);
 
+       view.setOnClickListener(this);
 
         return new ViewHolderDatos(view);
     }
@@ -57,8 +60,15 @@ implements View.OnClickListener{
         return listaSeccion.size();
     }
 
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener= listener;
+    }
+
     @Override
     public void onClick(View v) {
+        if (listener!=null){
+            listener.onClick(v);
+        }
 
     }
 

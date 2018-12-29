@@ -10,4 +10,15 @@
     <string name="button_login_done">Done</string>
     <string name="home">Home</string>
     <string name="title_activity_seccion">SeccionActivity</string>
+    <string name="title_activity_home2">Home2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Titulo_Info">Información sobre la app</string>
+    <string name="lorenipsum">LorenIpsum</string>
+    <string name="hello_blank_fragment">holap</string>
 </resources>
