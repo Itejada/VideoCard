@@ -125,7 +125,8 @@ public class Home2Activity
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
-
+            miFragment=new InformacionFragment();
+            fragmentSeleccionado=true;
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
