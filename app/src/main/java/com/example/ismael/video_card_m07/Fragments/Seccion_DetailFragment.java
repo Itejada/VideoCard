@@ -1,4 +1,4 @@
-package com.example.ismael.video_card_m07;
+npackage com.example.ismael.video_card_m07.Fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,16 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.ismael.video_card_m07.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link InformacionFragment.OnFragmentInteractionListener} interface
+ * {@link Seccion_DetailFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link InformacionFragment#newInstance} factory method to
+ * Use the {@link Seccion_DetailFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class InformacionFragment extends Fragment {
+public class Seccion_DetailFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +30,7 @@ public class InformacionFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public InformacionFragment() {
+    public Seccion_DetailFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +40,11 @@ public class InformacionFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment InformacionFragment.
+     * @return A new instance of fragment Seccion_DetailFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static InformacionFragment newInstance(String param1, String param2) {
-        InformacionFragment fragment = new InformacionFragment();
+    public static Seccion_DetailFragment newInstance(String param1, String param2) {
+        Seccion_DetailFragment fragment = new Seccion_DetailFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,7 +64,7 @@ public class InformacionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_informacion, container, false);
+        return inflater.inflate(R.layout.fragment_seccion__detail, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

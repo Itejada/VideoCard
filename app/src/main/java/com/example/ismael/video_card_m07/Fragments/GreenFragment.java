@@ -1,23 +1,33 @@
-package com.example.ismael.video_card_m07;
+package com.example.ismael.video_card_m07.Fragments;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import com.example.ismael.video_card_m07.AdapterDatos;
+import com.example.ismael.video_card_m07.Dataset.Seccion;
+import com.example.ismael.video_card_m07.R;
+
+import java.util.ArrayList;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link RedFragment.OnFragmentInteractionListener} interface
+ * {@link GreenFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link RedFragment#newInstance} factory method to
+ * Use the {@link GreenFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RedFragment extends Fragment {
+public class GreenFragment extends Fragment {
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +39,10 @@ public class RedFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public RedFragment() {
+    ArrayList<Seccion> listaSecciones;
+    RecyclerView recyclerView;
+
+    public GreenFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +52,11 @@ public class RedFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment RedFragment.
+     * @return A new instance of fragment GreenFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static RedFragment newInstance(String param1, String param2) {
-        RedFragment fragment = new RedFragment();
+    public static GreenFragment newInstance(String param1, String param2) {
+        GreenFragment fragment = new GreenFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,8 +75,23 @@ public class RedFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_red, container, false);
+    View vista = inflater.inflate(R.layout.fragment_green, container, false);
+    listaSecciones=new ArrayList<>();
+    recyclerView= vista.findViewById(R.id.recyclerView_home);
+    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+    llenarSeccion();
+    AdapterDatos adapterDatos= new AdapterDatos(listaSecciones);
+    recyclerView.setAdapter(adapterDatos);
+
+    adapterDatos.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getContext(),"SELECCIÓN: "
+                    + listaSecciones.get(recyclerView.getChildAdapterPosition(v))
+                    .getNombre(),Toast.LENGTH_SHORT).show();
+        }
+    });
+    return vista;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -103,4 +131,24 @@ public class RedFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+    private void llenarSeccion(){
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+
+
+
+    }
+
+
 }

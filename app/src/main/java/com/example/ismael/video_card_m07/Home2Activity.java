@@ -2,8 +2,6 @@ package com.example.ismael.video_card_m07;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +18,9 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.ismael.video_card_m07.Dataset.Seccion;
+import com.example.ismael.video_card_m07.Fragments.GreenFragment;
+import com.example.ismael.video_card_m07.Fragments.InformacionFragment;
+import com.example.ismael.video_card_m07.Fragments.RedFragment;
 
 import java.util.ArrayList;
 
@@ -42,7 +43,7 @@ public class Home2Activity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +52,7 @@ public class Home2Activity
 
             }
         });
-
+        */
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
