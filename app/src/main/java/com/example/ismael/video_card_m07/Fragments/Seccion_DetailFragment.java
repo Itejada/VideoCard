@@ -1,4 +1,4 @@
-npackage com.example.ismael.video_card_m07.Fragments;
+package com.example.ismael.video_card_m07.Fragments;
 
 import android.content.Context;
 import android.net.Uri;
