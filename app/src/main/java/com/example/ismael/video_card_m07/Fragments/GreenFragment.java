@@ -17,7 +17,7 @@ import com.example.ismael.video_card_m07.R;
 
 import java.util.ArrayList;
 
-
+/**/
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
