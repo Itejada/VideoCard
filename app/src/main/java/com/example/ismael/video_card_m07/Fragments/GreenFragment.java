@@ -39,7 +39,7 @@ public class GreenFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    ArrayList<Seccion> listaSecciones;
+    ArrayList<Seccion> lista_Secciones;
     RecyclerView recyclerView;
 
     public GreenFragment() {
@@ -75,23 +75,23 @@ public class GreenFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-    View vista = inflater.inflate(R.layout.fragment_green, container, false);
-    listaSecciones=new ArrayList<>();
-    recyclerView= vista.findViewById(R.id.recyclerView_home);
-    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-    llenarSeccion();
-    AdapterDatos adapterDatos= new AdapterDatos(listaSecciones);
-    recyclerView.setAdapter(adapterDatos);
+        View vista = inflater.inflate(R.layout.fragment_green, container, false);
+        lista_Secciones=new ArrayList<>();
+        recyclerView= vista.findViewById(R.id.recyclerView_home);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        llenarSeccion();
+        AdapterDatos adapterDatos= new AdapterDatos(lista_Secciones);
+        recyclerView.setAdapter(adapterDatos);
 
-    adapterDatos.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Toast.makeText(getContext(),"SELECCIÓN: "
-                    + listaSecciones.get(recyclerView.getChildAdapterPosition(v))
-                    .getNombre(),Toast.LENGTH_SHORT).show();
-        }
-    });
-    return vista;
+        adapterDatos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"SELECCIÓN: "
+                        + lista_Secciones.get(recyclerView.getChildAdapterPosition(v))
+                        .getNombre(),Toast.LENGTH_SHORT).show();
+            }
+        });
+        return vista;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -132,19 +132,12 @@ public class GreenFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
     private void llenarSeccion(){
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
-        listaSecciones.add(new Seccion("Spyro",R.drawable.spyro));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,1));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,2));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,3));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,4));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,5));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,6));
 
 
 

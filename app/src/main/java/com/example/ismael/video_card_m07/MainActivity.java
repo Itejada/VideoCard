@@ -11,9 +11,7 @@ import com.example.ismael.video_card_m07.Fragments.RedFragment;
 
 public class MainActivity extends AppCompatActivity implements GreenFragment.OnFragmentInteractionListener,InformacionFragment.OnFragmentInteractionListener,RedFragment.OnFragmentInteractionListener {
 
-    GreenFragment greenFragment;
-    RedFragment redFragment;
-    InformacionFragment informacionFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

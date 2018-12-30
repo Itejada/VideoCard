@@ -48,8 +48,6 @@ public class Home2Activity
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-
-
             }
         });
         */
@@ -186,20 +184,12 @@ public class Home2Activity
     }
 
     public void llenarSeccion(){
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,1));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,2));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,3));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,4));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,5));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,6));
 
 
     }
