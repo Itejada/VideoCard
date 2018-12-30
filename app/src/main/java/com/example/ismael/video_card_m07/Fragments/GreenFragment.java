@@ -1,6 +1,7 @@
 package com.example.ismael.video_card_m07.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,21 +12,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.ismael.video_card_m07.AdapterDatos;
+import com.example.ismael.video_card_m07.Adapters.AdapterDatos;
 import com.example.ismael.video_card_m07.Dataset.Seccion;
 import com.example.ismael.video_card_m07.R;
+import com.example.ismael.video_card_m07.SeccionActivity;
 
 import java.util.ArrayList;
 
 /**/
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link GreenFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link GreenFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class GreenFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -89,7 +84,12 @@ public class GreenFragment extends Fragment {
                 Toast.makeText(getContext(),"SELECCIÓN: "
                         + lista_Secciones.get(recyclerView.getChildAdapterPosition(v))
                         .getNombre(),Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getContext(),SeccionActivity.class);
+                intent.putExtra("numero_seccion",lista_Secciones.get(recyclerView.getChildAdapterPosition(v)).getNunmSeccion());
+                startActivity(intent);
+
             }
+
         });
         return vista;
     }

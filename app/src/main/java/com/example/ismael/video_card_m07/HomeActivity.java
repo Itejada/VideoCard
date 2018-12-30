@@ -18,8 +18,8 @@
 //
 //public class HomeActivity extends AppCompatActivity {
 //
-//    ArrayList<Seccion> lista_Secciones;
-//    RecyclerView recyclerView;
+//    ArrayList<Seccion> lista_VideoNotas;
+//    RecyclerView recyclerVideonotas;
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
@@ -40,27 +40,27 @@
 //    }
 //
 //    private void construirReccycler() {
-//        lista_Secciones = new ArrayList<>();
-//        recyclerView = (RecyclerView) findViewById(R.id.recyclerView_home);
+//        lista_VideoNotas = new ArrayList<>();
+//        recyclerVideonotas = (RecyclerView) findViewById(R.id.recyclerView_home);
 //        if (Utilitdades.visualizacion==Utilitdades.LIST){
-//            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//            recyclerVideonotas.setLayoutManager(new LinearLayoutManager(this));
 //        }else{
-//            recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+//            recyclerVideonotas.setLayoutManager(new GridLayoutManager(this, 2));
 //        }
 //
 //        llenarSeccion();
 //
-//        AdapterDatos adapterDatos=new AdapterDatos(lista_Secciones);
+//        AdapterDatos adapterDatos=new AdapterDatos(lista_VideoNotas);
 //        adapterDatos.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
 //                Toast.makeText(getApplicationContext(),"SELECCIÓN: "
-//                        + lista_Secciones.get(recyclerView.getChildAdapterPosition(v))
+//                        + lista_VideoNotas.get(recyclerVideonotas.getChildAdapterPosition(v))
 //                        .getNombre(),Toast.LENGTH_SHORT).show();
 //            }
 //        });
 //
-//        recyclerView.setAdapter(adapterDatos);
+//        recyclerVideonotas.setAdapter(adapterDatos);
 //    }
 //
 //
@@ -73,27 +73,27 @@
 //
 //
 //    private void llenarSeccion(){
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
-//        lista_Secciones.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
+//        lista_VideoNotas.add(new Seccion("Spyro",R.drawable.spyro));
 //
 //
 //
 //    }
 //
 //                                                /*for (int i = 0; i <110 ; i++) {
-//                                                    lista_Secciones.add("DATO "+i);
+//                                                    lista_VideoNotas.add("DATO "+i);
 //                                                }
-//                                                AdapterDatos adapter=new AdapterDatos(lista_Secciones);
-//                                                recyclerView.setAdapter(adapter);*/
+//                                                AdapterDatos adapter=new AdapterDatos(lista_VideoNotas);
+//                                                recyclerVideonotas.setAdapter(adapter);*/
 //}

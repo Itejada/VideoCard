@@ -1,4 +1,4 @@
-package com.example.ismael.video_card_m07;
+package com.example.ismael.video_card_m07.Adapters;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ismael.video_card_m07.Dataset.Seccion;
+import com.example.ismael.video_card_m07.R;
+import com.example.ismael.video_card_m07.Utilitdades;
 
 import java.util.ArrayList;
 
@@ -31,7 +33,7 @@ public class AdapterDatos
 
        int layout=0;
        if ( Utilitdades.visualizacion==Utilitdades.LIST){
-           layout=R.layout.lista_home_secciones;
+           layout= R.layout.lista_home_secciones;
        }else{
            layout=R.layout.grid_home_secciones;
 

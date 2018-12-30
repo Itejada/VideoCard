@@ -1,8 +1,10 @@
 package com.example.ismael.video_card_m07.Dataset;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Seccion implements Serializable {
+
     private int nunmSeccion;
     private int imagen;
     private String nombre;
@@ -17,6 +19,7 @@ public class Seccion implements Serializable {
         this.imagenDetalle=imagenDetalle;
         this.tituloDetalle = tituloDetalle;
     }
+
 
 
     public int getNunmSeccion() {

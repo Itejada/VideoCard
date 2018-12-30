@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.ismael.video_card_m07.Adapters.AdapterDatos;
 import com.example.ismael.video_card_m07.Dataset.Seccion;
 import com.example.ismael.video_card_m07.Fragments.GreenFragment;
 import com.example.ismael.video_card_m07.Fragments.InformacionFragment;
@@ -33,7 +34,6 @@ public class Home2Activity
 
     ArrayList<Seccion> lista_Secciones;
     RecyclerView recyclerView;
-
 
 
     @Override
@@ -58,7 +58,7 @@ public class Home2Activity
 
 /**Aqui instancio el fragment que se mostrara por defecto*/
         Fragment fragment = new GreenFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.content_home2,fragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.content_home2, fragment).commit();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -109,31 +109,30 @@ public class Home2Activity
 
         int id = item.getItemId();
 
-        Fragment miFragment=null;
-        boolean fragmentSeleccionado=false;
-
+        Fragment miFragment = null;
+        boolean fragmentSeleccionado = false;
 
 
         if (id == R.id.nav_camera) {
-            miFragment=new GreenFragment();
-            fragmentSeleccionado=true;
+            miFragment = new GreenFragment();
+            fragmentSeleccionado = true;
 
         } else if (id == R.id.nav_gallery) {
-            miFragment=new RedFragment();
-            fragmentSeleccionado=true;
+            miFragment = new RedFragment();
+            fragmentSeleccionado = true;
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
-            miFragment=new InformacionFragment();
-            fragmentSeleccionado=true;
+            miFragment = new InformacionFragment();
+            fragmentSeleccionado = true;
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
         }
 
-        if (fragmentSeleccionado==true){
-            getSupportFragmentManager().beginTransaction().replace(R.id.content_home2,miFragment).commit();
+        if (fragmentSeleccionado == true) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_home2, miFragment).commit();
 
         }
 
@@ -152,21 +151,19 @@ public class Home2Activity
     public void construirReccycler() {
         lista_Secciones = new ArrayList<>();
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView_home);
-        if (Utilitdades.visualizacion==Utilitdades.LIST){
+        if (Utilitdades.visualizacion == Utilitdades.LIST) {
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        }else{
+        } else {
             recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         }
 
         llenarSeccion();
 
-        AdapterDatos adapterDatos=new AdapterDatos(lista_Secciones);
+        AdapterDatos adapterDatos = new AdapterDatos(lista_Secciones);
         adapterDatos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"SELECCIÓN: "
-                        + lista_Secciones.get(recyclerView.getChildAdapterPosition(v))
-                        .getNombre(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "SELECCIÓN: " + lista_Secciones.get(recyclerView.getChildAdapterPosition(v)).getNombre(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -174,24 +171,27 @@ public class Home2Activity
     }
 
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.boton_lista: Utilitdades.visualizacion= Utilitdades.LIST;
+        switch (view.getId()) {
+            case R.id.boton_lista:
+                Utilitdades.visualizacion = Utilitdades.LIST;
                 break;
-            case R.id.boton_grid: Utilitdades.visualizacion=Utilitdades.GRID;
+            case R.id.boton_grid:
+                Utilitdades.visualizacion = Utilitdades.GRID;
                 break;
         }
         construirReccycler();
     }
 
-    public void llenarSeccion(){
-        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,1));
-        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,2));
-        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,3));
-        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,4));
-        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,5));
-        lista_Secciones.add(new Seccion(getString(R.string.spyro),R.drawable.spyro,getString(R.string.spyro_detalle),R.drawable.spyro,6));
+    public void llenarSeccion() {
+        lista_Secciones.add(new Seccion(getString(R.string.spyro), R.drawable.spyro, getString(R.string.spyro_detalle), R.drawable.spyro, 1));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro), R.drawable.spyro, getString(R.string.spyro_detalle), R.drawable.spyro, 2));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro), R.drawable.spyro, getString(R.string.spyro_detalle), R.drawable.spyro, 3));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro), R.drawable.spyro, getString(R.string.spyro_detalle), R.drawable.spyro, 4));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro), R.drawable.spyro, getString(R.string.spyro_detalle), R.drawable.spyro, 5));
+        lista_Secciones.add(new Seccion(getString(R.string.spyro), R.drawable.spyro, getString(R.string.spyro_detalle), R.drawable.spyro, 6));
 
 
     }
 
-}
+
+    }
