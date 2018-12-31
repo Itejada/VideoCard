@@ -13,9 +13,11 @@ import com.example.ismael.video_card_m07.R;
 
 import java.util.ArrayList;
 
-public class AdapterVideoNotes  extends RecyclerView.Adapter<AdapterVideoNotes.ViewHolderVideoNotes>{
+public class AdapterVideoNotes  extends RecyclerView.Adapter<AdapterVideoNotes.ViewHolderVideoNotes>
+implements View.OnClickListener{
 
         ArrayList<VideoNotes> lista_videos;
+        private View.OnClickListener listener;
 
     public AdapterVideoNotes(ArrayList<VideoNotes> lista_videos) {
         this.lista_videos = lista_videos;
@@ -25,6 +27,9 @@ public class AdapterVideoNotes  extends RecyclerView.Adapter<AdapterVideoNotes.V
     @Override
     public AdapterVideoNotes.ViewHolderVideoNotes onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_secion_de_videos,null,false);
+
+        view.setOnClickListener(this);
+
         return new ViewHolderVideoNotes(view);
     }
 
@@ -38,6 +43,16 @@ public class AdapterVideoNotes  extends RecyclerView.Adapter<AdapterVideoNotes.V
     @Override
     public int getItemCount() {
         return lista_videos.size();
+    }
+public void setOnclickListener(View.OnClickListener listener){
+        this.listener=listener;
+}
+    @Override
+    public void onClick(View v) {
+        if(listener!= null){
+
+        }
+
     }
 
     public class ViewHolderVideoNotes extends RecyclerView.ViewHolder {

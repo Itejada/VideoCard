@@ -27,6 +27,14 @@ public class SeccionActivity extends AppCompatActivity {
         llenarSeccion();
 
         AdapterVideoNotes adapterVideoNotes= new AdapterVideoNotes(lista_VideoNotas);
+        adapterVideoNotes.setOnclickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /**Aqui pasaara algo cuendo le demos al elemento mostrado en el RecyclerView*/
+            
+
+            }
+        });
         recyclerVideonotas.setAdapter(adapterVideoNotes);
 
     }

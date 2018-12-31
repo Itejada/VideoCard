@@ -1,5 +1,6 @@
 package com.example.ismael.video_card_m07;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -164,6 +165,10 @@ public class Home2Activity
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "SELECCIÓN: " + lista_Secciones.get(recyclerView.getChildAdapterPosition(v)).getNombre(), Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(Home2Activity.this,SeccionActivity.class);
+                intent.putExtra("numero_seccion",lista_Secciones.get(recyclerView.getChildAdapterPosition(v)).getNunmSeccion());
+                startActivity(intent);
+
             }
         });
 

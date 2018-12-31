@@ -29,7 +29,8 @@
             android:name=".Home2Activity"
             android:label="@string/title_activity_home2"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SeccionActivity"></activity>
+        <activity android:name=".SeccionActivity" />
+        <activity android:name=".PLayVideoActivity"></activity>
     </application>
 
 </manifest>
