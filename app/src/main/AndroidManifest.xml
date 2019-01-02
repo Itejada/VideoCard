@@ -19,18 +19,22 @@
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home"
+            android:label="@string/title_activity_home2"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Home2Activity$SeccionActivity"
-            android:label="@string/title_activity_seccion"
+            android:label="@string/title_activity_home2"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".Home2Activity"
             android:label="@string/title_activity_home2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SeccionActivity" />
-        <activity android:name=".PLayVideoActivity"></activity>
+        <activity android:name=".PLayVideoActivity" />
+        <activity
+            android:name=".LoginRegisterActivity"
+            android:label="@string/title_activity_login_register"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

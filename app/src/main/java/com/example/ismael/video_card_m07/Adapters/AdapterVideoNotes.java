@@ -50,7 +50,7 @@ public void setOnclickListener(View.OnClickListener listener){
     @Override
     public void onClick(View v) {
         if(listener!= null){
-
+            listener.onClick(v);
         }
 
     }

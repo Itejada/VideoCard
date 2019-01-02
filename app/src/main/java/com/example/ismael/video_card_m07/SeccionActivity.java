@@ -1,5 +1,6 @@
 package com.example.ismael.video_card_m07;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -31,7 +32,9 @@ public class SeccionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 /**Aqui pasaara algo cuendo le demos al elemento mostrado en el RecyclerView*/
-            
+                Toast.makeText(SeccionActivity.this,"SELECCIÓN: "+ lista_VideoNotas.get(recyclerVideonotas.getChildAdapterPosition(v)).getTextView(),Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(SeccionActivity.this,PLayVideoActivity.class);
+                startActivity(intent);
 
             }
         });

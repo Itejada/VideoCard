@@ -14,7 +14,7 @@
     <string name="button_login_done">Done</string>
     <string name="home">Home</string>
     <string name="title_activity_seccion">SeccionActivity</string>
-    <string name="title_activity_home2">Home2Activity</string>
+    <string name="title_activity_home2">VideoCard</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -25,4 +25,9 @@
     <string name="Titulo_Info">Información sobre la app</string>
     <string name="lorenipsum">LorenIpsum</string>
     <string name="hello_blank_fragment">holap</string>
+    <string name="title_activity_login_register">LoginRegisterActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>
