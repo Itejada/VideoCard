@@ -52,6 +52,9 @@ public class LoginRegisterActivity extends AppCompatActivity implements LoginFra
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
+
+
+
     }
 
 
