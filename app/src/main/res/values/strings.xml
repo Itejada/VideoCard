@@ -2,18 +2,18 @@
     <string name="app_name">Video Card</string>
     <string name="title_activity_home">HomeActivity</string>
 
-    <string name="spyro">Spyro the dragon</string>
+    <string name="spyro">Videos Spyro </string>
     <string name="spyro_detalle">Spyro es un dragón lila muy molon</string>
 
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">informar de un problema vía Email</string>
     <string name="hint_login_usuario">Usuario</string>
     <string name="hint_login_contraseña">Contra</string>
     <string name="title_activity_login">Sign in</string>
 
     <string name="button_login_done">Done</string>
     <string name="home">Home</string>
-    <string name="title_activity_seccion">SeccionActivity</string>
+    <string name="title_activity_seccion">Video Spyro</string>
     <string name="title_activity_home2">VideoCard</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -23,11 +23,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="Titulo_Info">Información sobre la app</string>
-    <string name="lorenipsum">LorenIpsum</string>
+    <string name="lorenipsum">Esta app dispone de multipista y permite de manera muy sencilla importar fácilmente distintos tipos de archivos multimedia. También cuenta con diferentes opciones de edición de vídeo y un amplio abanico de herramientas para mejorar la calidad de tu vídeo. También puedes añadir transiciones, textos, audios, etc. Actualmente se encuentra disponible solamente para Android.  Siendo asi una app para poder poner notas y consultarlas a tiempo real durante tu video, con la posibilidad de elegir entre colores para dichas notas </string>
     <string name="hello_blank_fragment">holap</string>
     <string name="title_activity_login_register">LoginRegisterActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Tab 3</string>
+    <string name="tab_text_1">Entrar</string>
+    <string name="tab_text_2">Registrar</string>
+
     <string name="section_format">Hello World from section: %1$d</string>
 </resources>

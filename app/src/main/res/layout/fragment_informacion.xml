@@ -5,12 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.InformacionFragment"
     android:background="#3d3d3d"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="36dp">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/Titulo_Info"
         android:textColor="@color/white_text"
         android:fontFamily="sans-serif"
@@ -20,7 +25,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/white_text"
+        android:textSize="15dp"
+
         android:text="@string/lorenipsum"
         android:fontFamily="sans-serif"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/giphy"
+        />
 
 </LinearLayout>

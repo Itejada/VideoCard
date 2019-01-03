@@ -44,14 +44,7 @@ public class Home2Activity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-            }
-        });
-        */
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -90,13 +83,21 @@ public class Home2Activity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast.makeText(Home2Activity.this,"(Abre Gmail)", Toast.LENGTH_LONG).show();
+                /**Aquilanzamos un intent para abrir el gmail con nuesrto gmail y un texto de demo, (conocimiento logico insuficiente)*/
+//            final Intent intent = new Intent(Intent.ACTION_VIEW)
+//                    .setType("plain/text")
+//                    .setData(Uri.parse("VideoCardSupport@gmail.com"))
+//                    .setClassName("com.google.android.gm", "com.google.android.gm.ComposeActivityGmail")
+//                    .putExtra(Intent.EXTRA_EMAIL, new String[]{"VideoCardSupport@gmail.com"})
+//                    .putExtra(Intent.EXTRA_SUBJECT, "test")
+//                    .putExtra(Intent.EXTRA_TEXT, "Hola, explique los motivos de su contacto");
+//            startActivity(intent);
             return true;
         }
 
@@ -127,8 +128,9 @@ public class Home2Activity
             miFragment = new InformacionFragment();
             fragmentSeleccionado = true;
         } else if (id == R.id.nav_share) {
-
+            Toast.makeText(Home2Activity.this,"(Lanza una pregunta a que app, verifica y la base de datos interna responde)", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_send) {
+            Toast.makeText(Home2Activity.this,"(Lanza una pregunta a que app, verifica y la base de datos interna responde)", Toast.LENGTH_LONG).show();
 
         }
 

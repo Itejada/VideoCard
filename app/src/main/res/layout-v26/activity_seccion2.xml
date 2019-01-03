@@ -15,7 +15,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView_seccion"
+            android:id="@+id/imageView"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_marginStart="8dp"
@@ -38,7 +38,7 @@
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <EditText
-            android:id="@+id/editText_seccion"
+            android:id="@+id/editText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="72dp"
@@ -49,7 +49,7 @@
             android:textColorHint="@color/grey_text"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView_seccion" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <ImageButton
             android:id="@+id/boton_lupa"
@@ -58,7 +58,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/editText_seccion"
+            app:layout_constraintStart_toEndOf="@+id/editText3"
             app:srcCompat="@android:drawable/ic_menu_search"
             android:onClick="onClick"/>
 
@@ -79,7 +79,6 @@
             android:layout_width="match_parent"
             android:layout_height="452dp"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

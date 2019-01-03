@@ -26,7 +26,6 @@ public class SeccionActivity extends AppCompatActivity {
         recyclerVideonotas = (RecyclerView) findViewById(R.id.recyclerView_seccion);
         recyclerVideonotas.setLayoutManager(new LinearLayoutManager(this));
         llenarSeccion();
-
         AdapterVideoNotes adapterVideoNotes= new AdapterVideoNotes(lista_VideoNotas);
         adapterVideoNotes.setOnclickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +46,8 @@ public class SeccionActivity extends AppCompatActivity {
 
         if (view.getId() == R.id.boton_back){
             onBackPressed();
+        }else if (view.getId() == R.id.boton_lupa){
+            Toast.makeText(SeccionActivity.this,"Lanza un Query a la base de datos y actualiza el recyclerView",Toast.LENGTH_SHORT).show();
 
         }
     }
